@@ -9,9 +9,14 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/navbar' %>
     <%= render 'shared/flashes' %>
-    <%= yield %>
+    <div class="wrapper-phone">
+      <div class="mobile-phone">
+        <div class="intern-phone">
+          <%= yield %>
+        </div>
+      </div>
+    </div>
     <%= javascript_include_tag 'application' %>
   </body>
 </html>

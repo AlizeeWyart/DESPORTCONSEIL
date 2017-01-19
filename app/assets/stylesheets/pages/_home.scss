@@ -2,3 +2,104 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+.wrapper-phone {
+    position: absolute;
+    left: 44%;
+    top: 16%;
+  .mobile-phone {
+    background-image: url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822044/iphone_background_sfdxcg.png");
+    background-size:cover;
+    height:433px;
+    width:213px;
+    padding: 50px 13px 51px 13px;
+    .intern-phone {
+      background-color: white;
+      width:100%;
+      height:100%;
+      overflow:scroll;
+      padding:10px;
+      .homepage-logo {
+        width:100%;
+        margin-top: 30%;
+      }
+      .homepage-button {
+        margin-top: 40%;
+        .home-btn {
+          width: 100%;
+          margin-bottom: 10px;
+          padding: 10px;
+        }
+      }
+    }
+  }
+}
+
+.btn {
+  background-color: #18265B;
+  color:white;
+  border-image: none;
+  border-style: none;
+  font-weight:100;
+  border-radius:0px;
+  width:100%;
+}
+
+.btn:hover {
+  background-color: #1C1F26;
+  color:white;
+}
+
+button {
+  background-color: #18265B;
+  color:white;
+  border-image: none;
+  border-style: none;
+  font-weight:100;
+}
+
+label {
+  font-weight: 100;
+  color: #18265B;
+  text-transform: uppercase;
+}
+
+.control-label {
+  text-align:center;
+}
+
+.form-control {
+  background-color: #F4F4F4;
+  border: 0px;
+  box-shadow: none;
+  border-radius: 0px;
+  border-bottom: 2px solid #18265B;
+  color: #1C1F26;
+  font-size: 12px;
+}
+
+.shared-links {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.signup-logo {
+  width:100%;
+}
+
+a {
+  color: #18265B;
+  text-decoration: none;
+}
+
+a:hover {
+  color:#1C1F26;
+  text-decoration: none;
+}
+
+button:hover {
+  background-color: #1C1F26;
+}
+
+.simple_form {
+  text-align:center;
+}

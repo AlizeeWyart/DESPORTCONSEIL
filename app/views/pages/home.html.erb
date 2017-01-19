@@ -1,2 +1,20 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<img src="http://res.cloudinary.com/dsczxfht7/image/upload/v1484823795/Logo_qthnt4.png" alt="" class="homepage-logo">
+
+<% if user_signed_in? %>
+<% else %>
+  <div class="homepage-button">
+    <%= link_to user_session_path do %>
+    <button class="home-btn">Se Connecter</button>
+    <% end %>
+    <button class="home-btn">S'inscrire</button>
+  </div>
+
+<% end %>
+
+  <div class="homepage-button">
+    <%= link_to dashboard_path do %>
+    <button class="home-btn">Go !</button>
+    <% end %>
+  </div>
+
+
