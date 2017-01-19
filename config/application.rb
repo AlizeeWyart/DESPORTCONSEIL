@@ -16,9 +16,6 @@ require "sprockets/railtie"
 # you've limited to :test, :development, or :production.
 Bundler.require(*Rails.groups)
 
-config.assets.enabled = true
-config.assets.paths << "#{Rails.root}/app/assets/fonts"
-
 module DESPORTCONSEIL
   class Application < Rails::Application
     config.generators do |generate|
