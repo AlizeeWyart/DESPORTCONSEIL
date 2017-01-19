@@ -1,7 +1,33 @@
+<%= link_to planning_path do %>
 <div id="planning" class="dashboard-card">
-
+  <h2>Planning</h2>
 </div>
+<% end %>
 
-<div id="planning" class="dashboard-card">
-
+<%= link_to messagerie_path do %>
+<div id="messagerie" class="dashboard-card">
+  <h2>Messagerie</h2>
 </div>
+<% end %>
+
+<%= link_to questionnaire_path do %>
+<div id="questionnaire" class="dashboard-card">
+  <h2>Questionnaire</h2>
+</div>
+<% end %>
+
+<%= link_to conseils_path do %>
+<div id="conseils" class="dashboard-card">
+  <h2>Conseils</h2>
+</div>
+<% end %>
+
+<%= link_to objectives_path do %>
+<div id="objectives" class="dashboard-card">
+  <h2>Mes objectifs</h2>
+</div>
+<% end %>
+
+<%= link_to destroy_user_session_path, method: :delete, class:"btn" do %>
+    <i class="fa fa-sign-out"></i>  Se déconnecter
+  <% end %>

@@ -2,6 +2,15 @@
  * CSS code specific to home page
  * (margin/padding adjustments)
  * ------------------------------------- */
+
+.back-arrow {
+  position: absolute;
+  left: 19px;
+  color: white;
+  top: 55px;
+  font-size:12px;
+}
+
 .wrapper-phone {
     position: absolute;
     left: 44%;
@@ -17,7 +26,6 @@
       width:100%;
       height:100%;
       overflow:scroll;
-      padding:10px;
       .homepage-logo {
         width:100%;
         margin-top: 30%;
@@ -102,4 +110,5 @@ button:hover {
 
 .simple_form {
   text-align:center;
+  padding: 0 10px 0 10px;
 }

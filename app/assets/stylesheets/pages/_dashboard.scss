@@ -1,8 +1,44 @@
 .dashboard-card {
-
+  height: 20%;
+  background-position: center center;
+  background-size:cover;
+  margin-bottom: 2px;
+  text-align:center;
+  cursor:pointer;
+  h2 {
+    width: 100%;
+    font-size: 17px;
+    color: white;
+    text-transform: uppercase;
+    font-weight: 300;
+    margin:0;
+    padding-top: 10%;
+    transition: 0.2s ease;
+  }
+}
+.dashboard-card:hover {
+  h2 {
+    font-weight: 500;
+    font-size: 20px;
+  }
 }
 
 #planning {
-  background-image: url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822097/HOMEPAGE/d2quija2h-i-beauty-cocktails-girltalk.jpg");
-  background-size:cover;
+  background-image: linear-gradient(-225deg, rgba(24, 38, 91, 0.6) 0%, rgba(24, 38, 91, 0.3) 50%), url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822097/HOMEPAGE/d2quija2h-i-beauty-cocktails-girltalk.jpg");
+}
+
+#messagerie {
+  background-image: linear-gradient(-225deg, rgba(24, 38, 91, 0.6) 0%, rgba(24, 38, 91, 0.3) 50%),url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822150/HOMEPAGE/fb7ynpbt0l8-mathyas-kurmann.jpg");
+}
+
+#questionnaire {
+  background-image: linear-gradient(-225deg, rgba(24, 38, 91, 0.6) 0%, rgba(24, 38, 91, 0.3) 50%),url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822103/HOMEPAGE/rlw-uc03gwc-glenn-carstens-peters.jpg")
+}
+
+#conseils {
+  background-image: linear-gradient(-225deg, rgba(24, 38, 91, 0.6) 0%, rgba(24, 38, 91, 0.3) 50%),url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822081/HOMEPAGE/plan-d-action2-1024x683.jpg")
+}
+
+#objectives {
+  background-image: linear-gradient(-225deg, rgba(24, 38, 91, 0.6) 0%, rgba(24, 38, 91, 0.3) 50%),url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822086/HOMEPAGE/hpjsku2uysu-carlos-muza.jpg")
 }

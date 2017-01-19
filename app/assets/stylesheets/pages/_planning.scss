@@ -1,0 +1,46 @@
+.course-card {
+  cursor:pointer;
+  padding:10px 10px 0px 10px;
+  h3 {
+    background-color: #18265B;
+    margin: 0;
+    padding: 5px;
+    text-align: center;
+    color: white;
+    font-weight: 300;
+    text-transform: uppercase;
+    font-size: 16px;
+  }
+  img {
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    margin-left: -4px;
+    margin-right: 4px;
+  }
+  .details {
+    background-color: #F4F4F4;
+    padding: 10px;
+    h4 {
+      padding:0;
+      margin:0;
+      font-size: 10px;
+      margin-bottom: 6px;
+      color: #1C1F26;
+      font-weight: 300;
+    }
+    i {
+      margin-right:10px;
+    }
+  }
+}
+
+.col-xs-8 {
+  margin:0;
+  padding:0;
+}
+.col-xs-4 {
+  margin:0;
+  padding:0;
+}
+

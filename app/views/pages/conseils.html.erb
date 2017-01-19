@@ -1,0 +1,18 @@
+<%= link_to dashboard_path do %>
+  <div id="conseils" class="dashboard-card">
+    <i class="fa fa-arrow-left back-arrow" aria-hidden="true"></i>
+    <h2>Conseils</h2>
+  </div>
+<% end %>
+
+<% @conseils.each do |conseil| %>
+  <%= link_to conseil_path(conseil) do %>
+  <div id="conseil-<%= conseil.id %>" class="conseil-card">
+    <h3><%= conseil.title %></h3>
+    <img src="<%= conseil.photo_url %>" alt="">
+    <p><%= conseil.description %>... <b>LIRE ></b></p>
+  </div>
+  <div class="separator"></div>
+  <% end %>
+<% end %>
+

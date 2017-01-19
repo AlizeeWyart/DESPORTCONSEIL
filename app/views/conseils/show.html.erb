@@ -1,0 +1,15 @@
+<div class="message-navbar">
+  <%= link_to conseils_path do %>
+  <i class="fa fa-arrow-left" aria-hidden="true" style="position:relative;left:0;"></i>
+  <% end %>
+  <%= link_to dashboard_path do %>
+  <i class="fa fa-home" aria-hidden="true" style="position:relative;left:130px"></i>
+  <% end %>
+</div>
+
+<div id="conseil-<%= @conseil.id %>" class="conseil-card">
+  <h3><%= @conseil.title %></h3>
+  <img src="<%= @conseil.photo_url %>" alt="">
+  <p><%= @conseil.description %></p>
+  <%= @conseil.content.html_safe %>
+</div>

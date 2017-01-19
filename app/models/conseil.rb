@@ -1,0 +1,2 @@
+class Conseil < ApplicationRecord
+end

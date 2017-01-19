@@ -10,10 +10,67 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170119102731) do
+ActiveRecord::Schema.define(version: 20170119153837) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
+
+  create_table "coachings", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_coachings_on_course_id", using: :btree
+    t.index ["user_id"], name: "index_coachings_on_user_id", using: :btree
+  end
+
+  create_table "conseils", force: :cascade do |t|
+    t.string   "title"
+    t.string   "photo_url"
+    t.string   "description"
+    t.text     "content"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "courses", force: :cascade do |t|
+    t.string   "name"
+    t.string   "place"
+    t.time     "start_hour"
+    t.time     "end_hour"
+    t.date     "day"
+    t.text     "description"
+    t.datetime "created_at",  null: false
+    t.datetime "updated_at",  null: false
+  end
+
+  create_table "messages", force: :cascade do |t|
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "content"
+    t.datetime "created_at",                 null: false
+    t.datetime "updated_at",                 null: false
+    t.boolean  "read",       default: false
+    t.index ["user_id"], name: "index_messages_on_user_id", using: :btree
+  end
+
+  create_table "participants", force: :cascade do |t|
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["course_id"], name: "index_participants_on_course_id", using: :btree
+    t.index ["user_id"], name: "index_participants_on_user_id", using: :btree
+  end
+
+  create_table "questionnaires", force: :cascade do |t|
+    t.string   "title"
+    t.text     "description"
+    t.string   "url"
+    t.datetime "created_at",                  null: false
+    t.datetime "updated_at",                  null: false
+    t.boolean  "answered",    default: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string   "email",                  default: "", null: false
@@ -28,8 +85,19 @@ ActiveRecord::Schema.define(version: 20170119102731) do
     t.inet     "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
+    t.string   "photo_url"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.date     "birthday"
+    t.string   "sexe"
+    t.string   "telephone"
     t.index ["email"], name: "index_users_on_email", unique: true, using: :btree
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true, using: :btree
   end
 
+  add_foreign_key "coachings", "courses"
+  add_foreign_key "coachings", "users"
+  add_foreign_key "messages", "users"
+  add_foreign_key "participants", "courses"
+  add_foreign_key "participants", "users"
 end

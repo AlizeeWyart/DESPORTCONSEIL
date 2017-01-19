@@ -1,0 +1,34 @@
+<%= link_to dashboard_path do %>
+<div id="planning" class="dashboard-card">
+   <i class="fa fa-arrow-left back-arrow" aria-hidden="true"></i>
+  <h2>Planning</h2>
+</div>
+<% end %>
+
+<% @courses.each do |course| %>
+<div id="course-<% course.id %>" class="course-card">
+  <h3><%= course.name %></h3>
+  <div class="details">
+  <h4><i class="fa fa-calendar-o" aria-hidden="true"></i>
+    <% if course.day == Date.today %>
+    AUJOURD'HUI
+    <% elsif course.day == Date.today + 1 %>
+    DEMAIN
+    <% else %>
+    <%= course.day.strftime("%e %b %Y")  %>
+    <% end %>
+  </h4>
+  <h4>
+    <i class="fa fa-clock-o" aria-hidden="true"></i>
+    De <%= course.start_hour.strftime("%H h %M") %> à
+    <%= course.end_hour.strftime("%H h %M") %>
+  </h4>
+  <h4>
+  <i class="fa fa-map-marker" aria-hidden="true"></i>
+   <%= course.place %></h4>
+  <h4>
+  <img src="<%= course.coaching.user.photo_url %>" alt="">
+  Avec <%= course.coaching.user.first_name %></h4>
+  </div>
+</div>
+<% end %>

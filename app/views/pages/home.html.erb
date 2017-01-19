@@ -1,20 +1,25 @@
 <img src="http://res.cloudinary.com/dsczxfht7/image/upload/v1484823795/Logo_qthnt4.png" alt="" class="homepage-logo">
 
 <% if user_signed_in? %>
+<div class="homepage-button" style="padding:0 10px 0 10px">
+  <div class="message">
+    <h1 style="font-size:14px; margin:0 0 10px 0; text-align:center;">Bienvenue <%= current_user.first_name %> !</h1>
+  </div>
+  <%= link_to dashboard_path do %>
+  <button class="btn" style="margin-bottom:10px">Go !</button>
+  <% end %>
+  <%= link_to destroy_user_session_path, method: :delete, class:"home-btn" do %>
+    <i class="fa fa-sign-out"></i>  Se déconnecter
+  <% end %>
+</div>
 <% else %>
-  <div class="homepage-button">
+  <div class="homepage-button" style="padding:0 10px 0 10px">
     <%= link_to user_session_path do %>
-    <button class="home-btn">Se Connecter</button>
+    <button class="home-btn">Se connecter</button>
     <% end %>
     <button class="home-btn">S'inscrire</button>
   </div>
-
 <% end %>
 
-  <div class="homepage-button">
-    <%= link_to dashboard_path do %>
-    <button class="home-btn">Go !</button>
-    <% end %>
-  </div>
 
 

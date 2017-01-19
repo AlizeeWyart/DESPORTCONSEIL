@@ -1,0 +1,24 @@
+<%= link_to dashboard_path do %>
+  <div id="questionnaire" class="dashboard-card">
+    <i class="fa fa-arrow-left back-arrow" aria-hidden="true"></i>
+  <h2>Questionnaires</h2>
+  </div>
+<% end %>
+
+<% @questionnaires.each do |form| %>
+  <div id="form-<%= form.id %>" class="form-card">
+    <h3>
+    <% if form.answered == false %>
+    <i class="fa fa-square-o" aria-hidden="true"></i>
+    <% else %>
+    <i class="fa fa-check-square-o" aria-hidden="true"></i>
+    <% end %>
+     <%= form.title %>
+    </h3>
+    <p><%= form.description %> </p>
+    <% if form.answered == false %>
+    <div href="<%= form.url %>" class="btn" style="font-size:10px">Répondre</div>
+    <% end %>
+  </div>
+<% end %>
+
