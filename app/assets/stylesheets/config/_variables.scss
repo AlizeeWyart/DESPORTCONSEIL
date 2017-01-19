@@ -16,14 +16,6 @@ $header-font: "Raleway", "Helvetica", "sans-serif";
 // }
 // $my-font: "Font Name";
 
-@font-face {
-    font-family: 'ensoenso';
-    src: url('enso-webfont.woff2') format('woff2'),
-         url('enso-webfont.woff') format('woff');
-    font-weight: normal;
-    font-style: normal;
-}
-
 // Font-size and line-height
 $base-size: 16px;
 $base-height: 1.4;
