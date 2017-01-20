@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>TODO</title>
+    <title>Desport Conseil APP</title>
+    <description></description>
     <%= csrf_meta_tags %>
     <%= action_cable_meta_tag %>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -9,7 +10,17 @@
     <%= stylesheet_link_tag    'application', media: 'all' %>
   </head>
   <body>
-    <%= render 'shared/flashes' %>
+    <a href="http://desportconseil.com/" style="cursor:pointer">
+    <i class="fa fa-home" aria-hidden="true" style="position:relative;left:20px;top:20px;font-size:20px;color:#18265B"></i></a>
+    <div class="hidden-xs">
+      <div class="app-description">
+        <h1>L'application</h1>
+        <img src="http://res.cloudinary.com/dsczxfht7/image/upload/v1484823795/Logo_qthnt4.png" style="width:400px">
+        <p>L'application qui vous accompagne dans le suivi de solutions sportives au sein de votre entreprise tout en simplifiant la vie de vos empoyés dans leurs pratiques sportives</p>
+        <p class="beta-test">Testez la version bêta <i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+        <a href="http://desportconseil.com" class="btn contact-btn">Nous contacter</a>
+      </div>
+    </div>
     <div class="wrapper-phone">
       <div class="mobile-phone">
         <div class="intern-phone">

@@ -3,6 +3,33 @@
  * (margin/padding adjustments)
  * ------------------------------------- */
 
+a {
+  color: white
+}
+
+
+.app-description {
+    width: 50%;
+    padding-top: 7%;
+    text-align: right;
+    font-family:'Raleway', sans-serif;
+    h1 {
+      font-family:"Enso", sans-serif;
+      text-transform: uppercase;
+      font-size: 64px;
+      margin: 0;
+      margin-bottom: -13px;
+    }
+    .contact-btn {
+      font-family:'Raleway', sans-serif;
+      width: 160px;
+    }
+    .beta-test {
+      font-weight: bolder;
+      text-transform: uppercase;
+    }
+}
+
 .back-arrow {
   position: absolute;
   left: 19px;
@@ -13,8 +40,11 @@
 
 .wrapper-phone {
     position: absolute;
-    left: 44%;
+    left: 60%;
     top: 16%;
+    @media all and (max-width: 700px){
+      left:25%;
+    }
   .mobile-phone {
     background-image: url("http://res.cloudinary.com/dsczxfht7/image/upload/v1484822044/iphone_background_sfdxcg.png");
     background-size:cover;
