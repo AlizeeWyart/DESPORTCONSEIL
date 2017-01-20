@@ -32,10 +32,13 @@
       }
       .homepage-button {
         margin-top: 40%;
+        text-align:center;
         .home-btn {
           width: 100%;
           margin-bottom: 10px;
           padding: 10px;
+          font-family:'Raleway', sans-serif;
+          font-size:12px;
         }
       }
     }
@@ -50,6 +53,7 @@
   font-weight:100;
   border-radius:0px;
   width:100%;
+  font-family: "Enso", sans-serif;
 }
 
 .btn:hover {
